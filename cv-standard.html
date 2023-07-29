@@ -19,6 +19,7 @@
     <style>
       body {
         font-family: "Open Sans", serif;
+        font-size: 14px;
       }
       @media print {
         .container {
@@ -28,7 +29,8 @@
       .intro .lead {
         font-weight: 400;
       }
-      .personal-item {        margin-bottom: 5px;
+      .personal-item {        
+        margin-bottom: 5px;
       }
       .personal-item label {
         margin-bottom: 0;
@@ -98,26 +100,124 @@
     </header>
 
     <div class="container-fluid mt-1 mb-1">
+      
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 class="border-bottom mt-3 pb-1 text-center">Recent Projects</h3>
+        </div>
+
+        <div class="col-sm-6">
+          <div id="2ic">
+            <h5 class="mb-0">2023 - Governement Medium Rise Remediation Project</h5>
+            <p class="mt-2">
+              Lead front end developer on a project to build a platform to manage the remediation scheme of medium rise buildings across the UK, in the wake of the Grenfell tragedy.
+            </p>
+
+            <h6>Technology</h6>
+            <ul>
+              <li>React, MUI, Redux and Redux Toolkit</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div id="2ic">
+            <h5 class="mb-0">2022 - Home Monitoring Platform</h5>
+            <p class="mt-2">
+              Lead full-stack developer on a IoT platform to remotely monitor devices within people's homes who require help e.g. elderly. 
+            </p>
+
+            <h6>Technology</h6>
+            <ul>
+              <li>React, MUI</li>
+              <li>Azure Web Apps (C#), Azure Static Apps, Azure Storage, Azure SQL</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div id="superdry">
+            <h5 class="mb-0">Q2/3/4 2020 - Superdry Ecommerce Platform</h5>
+            <p class="mt-2">
+              Worked as a full-stack developer as part of a team to re-build the Superdry e-commerce platform from the
+              ground up with microservices running on AWS.
+            </p>
+
+            <h6>Technology</h6>
+            <ul>
+              <li>React, RxJS</li>
+              <li>NodeJS, Lambda, DynamoDB, S3, SNS, SQS, Serverless Framework</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="col-sm-6">
+          <div id="flux">
+            <h5 class="mb-0">2023 - fluxtime.app - Work and Time Tracking SaaS platform</h5>
+            <p class="mt-2">
+              Lead full-stack developer on a green field work and time tracking SaaS platform. The platform includes a web app, iOS and Andrdoid mobile apps (built with React Native) and an API built in C# and hosted on Azure.
+            </p>
+
+            <h6>Technology</h6>
+            <ul>
+              <li>React, React Native, React Query, MUI</li>
+              <li>Azure Web Apps (C#), Vercel, Azure Storage, Azure SQL, AUth0</li>
+            </ul>
+          </div>
+          <hr />
+
+          <div id="cult">
+            <h5 class="mb-0">2021 - Wine Trading Platform</h5>
+            <p class="mt-2">
+              Led a team of ~15 developers building a green field microservices based wine trading platform for a high end wine investment business.
+            </p>
+
+            <h6>Technology</h6>
+            <ul>
+              <li>React, React Native, GraphQL, MUI</li>
+              <li>Azure Functions (C#), Azure Web Apps (C#), Azure Static Apps, Azure Service Bus, Azure Storage, Azure SQL, Auth0</li>
+            </ul>
+          </div>  
+
+          <hr />
+
+          <div id="honda">
+
+            <h5 class="mb-0">Q1 2020 - Honda - Electric Vehicle Mobile App</h5>
+            <p class="mt-2">
+              Part of a the development team to help deliver Honda's new connected car mobile app. My involvement was primarily as a React Native developer helping to flesh out the mobile app
+              functionality while ensuring feature parity across both iOS and Android.
+            </p>
+            
+            <h6>Technology</h6>
+            <ul>
+              <li>React Native, Redux</li>
+              <li>ASP.NET API (Azure functions), Azure SQL, Azure Storage</li>
+            </ul>
+          </div>
+          <hr />
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-sm-6 bg-white">
           <div class="intro">
             <h3 class="border-bottom mt-3 pb-1">Technical Summary</h3>
             <p>
-              Pragmatic full stack software engineer with 20 years experience, specialising in building and delivering
+              Pragmatic full stack software engineer with over 20 years experience, specialising in building and delivering
               high quality bespoke software solutions. My focus is on apps accessed via a browser and/or mobile devices.
               I've been freelance/contracting since 2014.
             </p>
 
             <p>
               I’ve been writing JS since 2001 which has given me an excellent platform for all things JS and TypeScript.
-              I’ve been using React and associated libraries (e.g. Redux, React Router, MaterialUI, React Bootstrap,
-              Styled Components etc) for all front-end projects since 2016.
+              I’ve been using React and associated libraries (e.g. React Router, MaterialUI, React Query etc) for all front-end projects since 2016.
             </p>
 
             <p>
-              I've been working in React Native for building iOS and Android apps since 2017. Most recently working on a
-              connected car mobile app to control various aspects of the upcoming range of vehicles for one of the
-              world's biggest car manufacturers.
+              I've been working in React Native for building iOS and Android apps since 2017. Recently working on a wine trading platform for a high end wine trading business and also a connected car mobile app for Honda's range of electric vehicles.
             </p>
 
             <p>
@@ -144,7 +244,7 @@
             Communication is a skill which is often overlooked for software developers but it's actually paramount in my
             opinion. I think this is a particular strong point of mine. Having worked for relatively small agencies has
             always meant wearing lots of different hats and dealing with all kinds of different people/roles. Whether
-            negotiating at senior level, dealing with key stakeholders, liasing with project managers etc.
+            negotiating at senior level, dealing with key stakeholders, working with project managers etc.
           </p>
 
           <p>
@@ -161,97 +261,9 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-12">
-          <h3 class="border-bottom mt-3 pb-1 text-center">Recent Projects</h3>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm-12">
-              <h5 class="mb-0">2021 - Wine Trading Platform</h5>
-              <p class="mt-2">
-                Led a team of ~15 developers building a green field microservices based wine trading platform for a high end wine investment business.
-              </p>
-
-              <h6>Technology</h6>
-              <ul>
-                <li>React, React Native, GraphQL, MUI</li>
-                <li>Azure Functions (C#), Azure Web Apps (C#), Azure Static Apps, Azure Service Bus, Azure Storage, Azure SQL, Auth0</li>
-              </ul>
-            </div>            
-            <div class="col-sm-12">
-              <h5 class="mb-0">Q2/3/4 2020 - Superdry Ecommerce Platform</h5>
-              <p class="mt-2">
-                Worked as a full-stack developer as part of a team to re-build the Superdry e-commerce platform from the
-                ground up with microservices running on AWS.
-              </p>
-
-              <h6>Technology</h6>
-              <ul>
-                <li>React, RxJS</li>
-                <li>NodeJS, Lambda, DynamoDB, S3, SNS, SQS, Serverless Framework</li>
-              </ul>
-            </div>            
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="">
-
-            <h5 class="mb-0">Q1 2020 - Electric Vehicle Mobile App</h5>
-            <p class="mt-2">
-              Worked as part of a team to help deliver Honda's new connected car mobile app. My involvement was primarily as a React Native developer helping to flesh out the mobile app
-              functionality while ensuring feature parity across both iOS and Android.
-            </p>
-            
-            <h6>Technology</h6>
-            <ul>
-              <li>React Native, Redux</li>
-              <li>ASP.NET API (Azure functions), Azure SQL, Azure Storage</li>
-            </ul>
-          </div>
-
-          <div>
-            <hr />
-            <h5 class="mb-0">2019-2020 - SaaS HGV Recruitment Platform</h5>
-            <p class="mt-2">
-              Sole developer on a platform to completely streamline the relationship between agencies, HGV drivers and clients in a space which
-              is inherently difficult to manage.
-            </p>
-            <h6>Technology</h6>
-            <ul>
-              <li>Web: React, Bootstrap, Webpack</li>
-              <li>Mobile: React Native, Redux</li>
-              <li>API: ASP.NET Core API, C#, Azure SQL, Entity Framework, Azure Storage</li>
-              <li>Other: Auth0 for authentication, Webjobs and Azure functions, Mapbox, AppCenter</li>
-            </ul>
-          </div>
-        </div>
-        <!-- <div class="col-sm-6">
-          <h5 class="mb-0">Custom CRM for multinational business</h5>
-          <p class="mt-2">
-            Designed and built a custom CRM system for a large pharmaceutical equipment manufacturer.
-          </p>
-          <p>
-            They were originally using ZOHO CRM which was proving too restrictive and so they decided to go down the
-            bespoke route. The system handles many aspects of CRM including customer/contact management, todo
-            management, opportunity tracking, sales funnels, inbound email, report building etc.
-          </p>
-          <h6>Technology</h6>
-          <ul>
-            <li>ASP.NET web app</li>
-            <li>C# back-end</li>
-            <li>React frontend</li>
-            <li>Azure SQL</li>
-            <li>Azure Storage</li>
-            <li>Webjobs and Azure functions for background task processing</li>
-          </ul>
-        </div> -->
-      </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid pagebreak">
       <div class="row">
         <div class="col-sm-8">
           <h3 class="border-bottom mt-3 pb-1">Employment History</h3>
@@ -263,40 +275,49 @@
               <p class="mt-2">8fifty4 is my limited company. Projects worked on/delivered include:</p>
               <ul>
                 <li>
-                  Old Mill Wealth Management: Financial Planning system. Tech: React, Redux, ASP.NET MVC, C#, SQL,
+                  2023: Flux Time: Time and work tracking platform. Tech: React, MUI, React Native, React Query, C# Azure Web App, Azure Storage, Azure SQL
+                </li>
+                <li>
+                  2023: OPX Group: Agency Management platform. Tech: React, Bootstrap, React Native, React Query, C# Azure Web App, Azure Storage, Azure SQL
+                </li>
+                <li>
+                  2020: Superdry: Ecommerce platform. Tech: React, RxJS, NodeJS, AWS Lambda, AWS DynamoDB, AWS S3, AWS SNS, AWS SQS, Serverless Framework
+                </li>
+                <li>
+                  2018-2023: Old Mill Wealth Management: Financial Planning system. Tech: React, Redux, ASP.NET MVC, C#, SQL,
                   Entity Framework, Azure
                 </li>
                 <li>
-                  Brewin Dolphin Wealth Management: Large ETL system. Tech: ASP.NET MVC, C#, SQL, Entity Framework
+                  2018 Q:be: Marketing Planning/Budgeting system - native mobile app to interface with their existing
+                  system/API. Tech: React, React Native, Redux
                 </li>
                 <li>
-                  Advent Global: PolicyBox. End-to-end insurance management platform. Tech: React, React Native, Redux,
-                  Microservices, Azure Service Bus, JS, ASP.NET MVC, C#, SQL, Entity Framework, Dapper, Azure
-                </li>
-                <li>
-                  Biopharma: Custom CRM - handles many aspects of CRM including customer/contact management, todo
+                  2018: Biopharma: Custom CRM - handles many aspects of CRM including customer/contact management, todo
                   management, opportunity tracking, sales funnels, inbound email, report building etc. Tech: React,
                   ASP.NET MVC, C#, SQL, Entity Framework, Azure
                 </li>
                 <li>
-                  Q:be: Marketing Planning/Budgeting system - native mobile app to interface with their existing
-                  system/API. Tech: React, React Native, Redux
+                  2015-2020: Advent Global: PolicyBox. End-to-end insurance management platform. Tech: React, React Native, Redux,
+                  Microservices, Azure Service Bus, JS, ASP.NET MVC, C#, SQL, Entity Framework, Dapper, Azure
                 </li>
                 <li>
-                  The FD Centre: Custom CMS for websites in all 17 regions they operate globally. Tech: Ubuntu, Apache,
+                  2015-2023: The FD Centre: Custom CMS for websites in all 17 regions they operate globally. Tech: Ubuntu, Apache,
                   PHP, MySQL, AWS, WordPress, jQuery
                 </li>
                 <li>
-                  J Brand: Timesheet and Expense management for remote staff. Tech: React, ASP.NET MVC, C#, SQL, Entity
+                  2015: J Brand: Timesheet and Expense management for remote staff. Tech: React, ASP.NET MVC, C#, SQL, Entity
                   Framework, Azure
                 </li>
                 <li>
-                  Berkeley Parks: CRM/Invoicing/Asset management. Tech: JQuery, ASP.NET MVC, C#, SQL, Entity Framework,
+                  2014: Berkeley Parks: CRM/Invoicing/Asset management. Tech: JQuery, ASP.NET MVC, C#, SQL, Entity Framework,
                   Azure
                 </li>
                 <li>
-                  Somerset Larder: Order tracking/fulfilment. Tech: JQuery, ASP.NET MVC, C#, SQL, Entity Framework,
+                  2014: Somerset Larder: Order tracking/fulfilment. Tech: JQuery, ASP.NET MVC, C#, SQL, Entity Framework,
                   Azure
+                </li>
+                <li>
+                  2014: Brewin Dolphin Wealth Management: Large ETL system. Tech: ASP.NET MVC, C#, SQL, Entity Framework
                 </li>
               </ul>
             </div>
@@ -306,8 +327,8 @@
               <em class="text-muted">2001 - 2014</em>
               <p class="mt-2">
                 Qchi are a bespoke software consultancy based in Wiltshire. I joined as a junior developer but by the
-                time I decided to move into freelance, I'd progressed to lead engineer and was heavily involved in the
-                technical direction of the business. I managed and delivered many large complex systems for household
+                time I decided to move into freelance, I'd progressed to lead engineer and was the technical lead of the business. 
+                I managed and delivered many large complex systems for household
                 name clients including:
               </p>
               <ul>
@@ -335,7 +356,7 @@
           <div class="about-me">
             <em class="text-muted float-right" style="margin-top: 10px">DOB 14/04/1982</em>
             <h3 class="border-bottom mt-3 pb-1">About Me</h3>
-            <p>I'm a dedicated father of 2 boys (ages 7 &amp; 9) who keep me and my wife on our toes at all times.</p>
+            <p>I'm a dedicated father of 2 boys (ages 8 &amp; 10) who keep me and my wife on our toes at all times.</p>
             <p>
               I'm a keen runner (although not very good!) and generally like to keep fit. Me and my 2 boys are often out
               on our bikes. I played football at a good level when I was younger and still try to play nowadays whenever
