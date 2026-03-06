@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bittensor & TAO — Decentralized Machine Intelligence | Swap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Syne', 'sans-serif'],
+              sans: ['DM Sans', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              tao: {
+                50: '#fefce8',
+                100: '#fef9c3',
+                200: '#fef08a',
+                300: '#fde047',
+                400: '#facc15',
+                500: '#eab308',
+                600: '#ca8a04',
+                700: '#a16207',
+                800: '#854d0e',
+                900: '#713f12',
+              },
+              void: {
+                950: '#06060a',
+                900: '#0c0c12',
+                800: '#12121a',
+                700: '#1a1a24',
+                600: '#24242f',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'DM Sans', system-ui, sans-serif;
+      }
+      .font-display {
+        font-family: 'Syne', sans-serif;
+      }
+      /* Seamless iframe: no scrollbars, no border, clip to radius */
+      .swap-embed-wrapper {
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.06),
+          0 25px 50px -12px rgba(0, 0, 0, 0.5),
+          0 0 80px -20px rgba(234, 179, 8, 0.15);
+      }
+      .swap-embed-wrapper iframe {
+        display: block;
+        border: none;
+        width: 100%;
+        height: 100%;
+        min-height: 640px;
+      }
+      .gradient-mesh {
+        background:
+          radial-gradient(ellipse 80% 50% at 50% -20%, rgba(234, 179, 8, 0.12), transparent),
+          radial-gradient(ellipse 60% 40% at 100% 0%, rgba(120, 80, 255, 0.08), transparent),
+          radial-gradient(ellipse 50% 30% at 0% 50%, rgba(234, 179, 8, 0.06), transparent);
+      }
+    </style>
+  </head>
+  <body class="bg-void-950 text-gray-200 antialiased">
+    <div class="gradient-mesh min-h-screen">
+      <!-- Nav -->
+      <header class="border-b border-white/5">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+          <span class="font-display text-lg font-semibold tracking-tight text-white"
+            >Bittensor</span
+          >
+          <a
+            href="#swap"
+            class="rounded-lg bg-tao-500/90 px-4 py-2 font-medium text-void-950 transition hover:bg-tao-400"
+            >Swap TAO</a
+          >
+        </div>
+      </header>
+
+      <main class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
+        <!-- Hero -->
+        <section class="mb-16 lg:mb-20">
+          <h1 class="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Decentralized machine
+            <span class="text-tao-400">intelligence</span>
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg text-gray-400">
+            Bittensor is a peer-to-peer blockchain that creates a global marketplace for AI.
+            Train, fine-tune, and run models across a network of specialized subnets—rewarded
+            in TAO.
+          </p>
+        </section>
+
+        <!-- Two-column: content + swap -->
+        <div class="grid gap-12 lg:grid-cols-[1fr,400px] lg:gap-16">
+          <!-- Info column -->
+          <div class="space-y-10">
+            <section>
+              <h2 class="font-display text-xl font-semibold text-white">
+                What is Bittensor?
+              </h2>
+              <p class="mt-3 text-gray-400 leading-relaxed">
+                Bittensor runs on Subtensor, a proof-of-stake chain built on Substrate. It
+                acts as a coordination layer for specialized <strong class="text-gray-300">subnets</strong>—each
+                one a marketplace for a different kind of digital commodity: conversational
+                AI, image generation, protein folding, financial forecasting, and more.
+              </p>
+              <p class="mt-3 text-gray-400 leading-relaxed">
+                Miners and validators contribute and verify machine intelligence; the network
+                rewards them with TAO based on a meritocratic system. No single company
+                controls the infrastructure—it’s open, permissionless, and globally distributed.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="font-display text-xl font-semibold text-white">
+                The TAO token
+              </h2>
+              <p class="mt-3 text-gray-400 leading-relaxed">
+                TAO has a <strong class="text-gray-300">fixed supply of 21 million</strong>,
+                similar to Bitcoin. New TAO is created through mining and validation at a
+                decreasing rate. Each token is tied to verified machine intelligence on the
+                network—rewarding producers and validators who make the ecosystem useful.
+              </p>
+              <p class="mt-3 text-gray-400 leading-relaxed">
+                TAO is the incentive layer: it aligns everyone toward better, more useful AI
+                instead of closed, centralized systems.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="font-display text-xl font-semibold text-white">
+                Swap TAO on your site
+              </h2>
+              <p class="mt-3 text-gray-400 leading-relaxed">
+                The swap widget below is embedded via a single iframe—no backend, no API keys,
+                no maintenance. It stays up to date with Taostats and gives your visitors a
+                seamless way to trade TAO without leaving your page.
+              </p>
+            </section>
+          </div>
+
+          <!-- Swap embed column – seamless iframe -->
+          <section id="swap" class="lg:sticky lg:top-8">
+            <div class="mb-3 flex items-center justify-between">
+              <h2 class="font-display text-sm font-semibold uppercase tracking-wider text-gray-500">
+                Swap
+              </h2>
+              <span class="rounded-full bg-tao-500/20 px-2.5 py-0.5 text-xs font-medium text-tao-400">
+                Powered by Taostats
+              </span>
+            </div>
+            <div class="swap-embed-wrapper w-full max-w-[420px] bg-void-900">
+              <iframe
+                src="http://localhost:3001/swap/embed/v1"
+                title="Taostats Swap — Trade TAO"
+              ></iframe>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="border-t border-white/5 py-8">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <p class="text-sm text-gray-500">
+            This is a demo page. Swap widget by
+            <a href="https://taostats.io" class="text-tao-400 hover:text-tao-300" target="_blank" rel="noopener">Taostats</a>.
+            Bittensor by the Opentensor Foundation.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
