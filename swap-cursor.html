@@ -166,7 +166,7 @@
             </div>
             <div class="swap-embed-wrapper w-full max-w-[420px] bg-void-900">
               <iframe
-                src="http://localhost:3001/swap/embed/v1"
+                id="swap-embed"
                 title="Taostats Swap — Trade TAO"
               ></iframe>
             </div>
@@ -184,5 +184,13 @@
         </div>
       </footer>
     </div>
+    <script>
+      (function () {
+        var host = window.location.hostname;
+        var isLocal = window.location.protocol === 'file:' || /^localhost$|^127\.0\.0\.1$/i.test(host) || host === '';
+        var url = isLocal ? 'http://localhost:3001/swap/embed/v1' : 'https://beta.taostats.io/swap/embed/v1';
+        document.getElementById('swap-embed').src = url;
+      })();
+    </script>
   </body>
 </html>
