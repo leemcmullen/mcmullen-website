@@ -1,44 +1,800 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-full scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lee McMullen. Software Developer.</title>
-
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Lee McMullen – Outcome‑Focused Software Engineer</title>
+    <meta
+      name="description"
+      content="Fractional engineering leadership, productised consulting, and delivery accelerators that create outsized impact beyond a simple day rate."
     />
 
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-37646501-1']);
-      _gaq.push(['_setDomainName', 'mcmullen.im']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src =
-          ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['system-ui', 'SF Pro Text', 'Inter', 'sans-serif'],
+              display: ['system-ui', 'SF Pro Display', 'Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#ecfeff',
+                100: '#cffafe',
+                200: '#a5f3fc',
+                300: '#67e8f9',
+                400: '#22d3ee',
+                500: '#06b6d4',
+                600: '#0891b2',
+                700: '#0e7490',
+                800: '#155e75',
+                900: '#164e63',
+              },
+            },
+            boxShadow: {
+              'glow-brand':
+                '0 0 40px rgba(6,182,212,0.35), 0 0 80px rgba(15,23,42,0.9)',
+            },
+            backgroundImage: {
+              'hero-gradient':
+                'radial-gradient(circle at top left, rgba(56,189,248,0.18), transparent 55%), radial-gradient(circle at top right, rgba(129,140,248,0.18), transparent 55%), radial-gradient(circle at bottom, rgba(15,23,42,0.95), #020617 70%)',
+            },
+          },
+        },
+      };
     </script>
+
+    <style>
+      .glass {
+        background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.08), transparent 60%),
+          rgba(15, 23, 42, 0.88);
+        backdrop-filter: blur(26px);
+        -webkit-backdrop-filter: blur(26px);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+      }
+
+      .noise {
+        position: fixed;
+        inset: -50px;
+        pointer-events: none;
+        opacity: 0.13;
+        mix-blend-mode: soft-light;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='noStitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.75'/%3E%3C/svg%3E");
+      }
+    </style>
   </head>
-  <body style="padding: 50px 0 20px">
-    <div class="container body-content">
-      <div class="jumbotron">
-        <h1>Lee McMullen</h1>
-        <p>
-          I'm a full stack software developer with 20 years experience. I specialise in building and delivering high
-          quality bespoke software applications.
-        </p>
-        <p>Email: lee@mcmullen.im</p>
-        <p>Twitter: <a href="https://twitter.com/leemcmullen" target="_blank">@leemcmullen</a></p>
-      </div>
-    </div>
+
+  <body class="h-full bg-slate-950 text-slate-100 antialiased">
+    <div class="noise"></div>
+
+    <main class="relative min-h-screen bg-hero-gradient">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-30 border-b border-slate-800/80 bg-slate-950/60 backdrop-blur-xl"
+      >
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+          <div class="flex items-center gap-2">
+            <div
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-brand-500 to-sky-500 shadow-glow-brand"
+            >
+              <span class="text-lg font-semibold tracking-tight text-slate-950">LM</span>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                Lee McMullen
+              </p>
+              <p class="text-xs text-slate-400">Outcome‑focused software engineer</p>
+            </div>
+          </div>
+
+          <nav class="hidden items-center gap-8 text-xs font-medium text-slate-300 sm:flex">
+            <a href="#offers" class="hover:text-brand-300">Productised offers</a>
+            <a href="#clients" class="hover:text-brand-300">Who I work with</a>
+            <a href="#process" class="hover:text-brand-300">How it works</a>
+            <a href="#about" class="hover:text-brand-300">About</a>
+          </nav>
+
+          <a
+            href="mailto:lee@mcmullen.im?subject=Engagement%20enquiry"
+            class="inline-flex items-center gap-1 rounded-full bg-brand-500 px-4 py-1.5 text-xs font-semibold tracking-wide text-slate-950 shadow-lg shadow-cyan-500/40 transition hover:bg-brand-400"
+          >
+            <span>Check availability</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section
+        class="relative overflow-hidden border-b border-slate-800/60"
+      >
+        <div
+          class="pointer-events-none absolute inset-x-24 -top-32 -z-10 h-64 rounded-full bg-gradient-to-r from-cyan-500/20 via-sky-500/10 to-indigo-500/20 blur-3xl"
+        ></div>
+
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-16 sm:px-6 lg:flex-row lg:items-center lg:px-8 lg:py-24">
+          <div class="relative max-w-xl space-y-8">
+            <div
+              class="inline-flex flex-wrap items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/70 px-3 py-1 text-[11px] font-medium text-slate-300 shadow-lg shadow-black/40"
+            >
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+              <span>Outcome‑focused, hands‑on engineer — not just another day‑rate contractor</span>
+            </div>
+
+            <div class="space-y-4">
+              <h1
+                class="font-display text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl sm:leading-tight lg:text-6xl"
+              >
+                Get a senior
+                <span class="bg-gradient-to-r from-cyan-300 via-sky-300 to-indigo-300 bg-clip-text text-transparent">
+                  software engineer
+                </span>
+                for a fraction of the cost of hiring one.
+              </h1>
+              <p class="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
+                I work with product and engineering leaders as a fractional, outcome‑focused engineer.
+                I don’t “vibe code”: we start by understanding the business process and what needs to
+                change, then agree a clear outcome. From there I work alongside your team to deliver it
+                — designing, building, reviewing and unblocking as needed.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4">
+              <a
+                href="mailto:lee@mcmullen.im?subject=Fit%20for%20a%20productised%20engagement&body=Tell%20me%20about%20your%20team%2C%20current%20roadmap%2C%20and%20where%20you%27re%20stuck."
+                class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-glow-brand transition hover:bg-brand-400"
+              >
+                Talk about an outcome
+              </a>
+              <a
+                href="#offers"
+                class="inline-flex items-center gap-1 text-xs font-medium text-slate-300 underline-offset-4 hover:text-brand-200 hover:underline"
+              >
+                View productised offers
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+
+            <dl class="grid max-w-lg grid-cols-3 gap-4 text-xs text-slate-300 sm:text-sm">
+              <div>
+                <dt class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Experience</dt>
+                <dd class="mt-1 font-semibold text-slate-50">20+ years</dd>
+              </div>
+              <div>
+                <dt class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Focus</dt>
+                <dd class="mt-1 font-semibold text-slate-50">Shipping complex software</dd>
+              </div>
+              <div>
+                <dt class="text-[11px] uppercase tracking-[0.2em] text-slate-500">Mode</dt>
+                <dd class="mt-1 font-semibold text-slate-50">Hands‑on, outcome‑led</dd>
+              </div>
+            </dl>
+
+            <p class="mt-4 max-w-lg text-[11px] leading-relaxed text-slate-400 sm:text-xs">
+              I work with a small number of teams at any one time, leaning on AI‑assisted workflows for
+              the repetitive parts of the job. That leaves more of my attention for the judgement calls,
+              trade‑offs and “what should we actually build?” questions.
+            </p>
+          </div>
+
+          <div class="relative w-full max-w-md lg:ml-auto">
+            <div
+              class="glass relative overflow-hidden rounded-3xl shadow-2xl shadow-black/60 ring-1 ring-slate-800/80"
+            >
+              <div
+                class="absolute inset-x-12 -top-16 h-32 rounded-full bg-gradient-to-r from-cyan-500/25 via-sky-500/15 to-indigo-500/25 blur-3xl"
+              ></div>
+              <div class="relative p-6 sm:p-7">
+                <div class="flex items-center justify-between gap-3">
+                  <div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                      Productised engagements
+                    </p>
+                    <p class="mt-1 text-sm text-slate-200">
+                      Two simple ways of working: a fixed‑price project or a monthly senior engineer.
+                    </p>
+                  </div>
+                  <span
+                    class="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold text-emerald-300 ring-1 ring-emerald-400/40"
+                  >
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    Limited availability
+                  </span>
+                </div>
+
+                <div class="mt-6 space-y-4 text-xs text-slate-200">
+                  <div class="flex items-start gap-3">
+                    <div
+                      class="mt-0.5 flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/80 ring-1 ring-slate-700/80"
+                    >
+                      <span class="text-[11px] font-semibold text-brand-300">01</span>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-slate-50">Outcome project</p>
+                      <p class="mt-1 text-[11px] text-slate-300">
+                        A fixed‑price piece of work with a clear outcome, delivered hands‑on in your
+                        codebase alongside your team.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <div
+                      class="mt-0.5 flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/80 ring-1 ring-slate-700/80"
+                    >
+                      <span class="text-[11px] font-semibold text-brand-300">02</span>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-slate-50">Monthly senior engineer</p>
+                      <p class="mt-1 text-[11px] text-slate-300">
+                        A minimum one‑month engagement where you get the equivalent of a senior engineer
+                        on your team without hiring full‑time.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-6 flex flex-col items-center gap-3 border-t border-slate-800/80 pt-4 text-center text-[11px] text-slate-400"
+                >
+                  <p>We’ll decide together whether an Outcome project or a Monthly senior engineer slot is the better fit.</p>
+                  <a
+                    href="mailto:lee@mcmullen.im?subject=Scope%20a%20productised%20engagement"
+                    class="inline-flex items-center justify-center gap-1 rounded-full bg-slate-900/80 px-5 py-2 text-[11px] font-semibold text-slate-100 ring-1 ring-slate-700/80 hover:bg-slate-800"
+                  >
+                    Outline your situation
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Productised Offers -->
+      <section id="offers" class="border-b border-slate-800/60 bg-slate-950/40">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div class="max-w-xl space-y-3">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
+                Productised offers
+              </p>
+              <h2 class="font-display text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
+                A simple, fixed monthly fee instead of another full‑time hire.
+              </h2>
+              <p class="text-sm text-slate-300 sm:text-[15px]">
+                For a minimum of <span class="font-semibold">one month at £3,000</span> you get the
+                equivalent of a senior engineer focused on outcomes rather than hours — including
+                hands‑on coding, reviews, and help shaping the work.
+              </p>
+            </div>
+            <p class="max-w-xs text-xs text-slate-400">
+              Every engagement starts with understanding the underlying business process. From there you
+              get written follow‑up, collaboration in your usual tools, and a short summary you can
+              share with the wider team.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <!-- Offer 1: Outcome project -->
+            <article
+              class="group flex flex-col justify-between rounded-2xl border border-slate-800/80 bg-gradient-to-b from-slate-900/80 to-slate-950/80 p-6 shadow-xl shadow-black/50 ring-1 ring-transparent transition hover:-translate-y-1 hover:border-brand-500/70 hover:ring-brand-500/40"
+            >
+              <header class="space-y-4">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="font-display text-lg font-semibold text-slate-50">
+                    Outcome project
+                  </h3>
+                  <span
+                    class="rounded-full bg-slate-900/80 px-3 py-1 text-[11px] font-medium text-slate-300 ring-1 ring-slate-700/80"
+                  >
+                    Fixed‑price project · from £3k
+                  </span>
+                </div>
+                <p class="text-sm text-slate-300">
+                  A clearly defined piece of work where we agree the business outcome up‑front and I work
+                  in your codebase to deliver it with your team.
+                </p>
+              </header>
+
+              <ul class="mt-5 space-y-2 text-xs text-slate-300">
+                <li class="flex gap-2">
+                  <span class="mt-[3px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>Understand the current process, constraints, and what “good” looks like.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[3px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>Shape the work into sensible slices your team (and I) can actually ship.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[3px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>Hands‑on coding, reviews, and unblocking until the agreed outcome is met.</span>
+                </li>
+              </ul>
+
+              <footer class="mt-6 flex flex-col items-center gap-3 text-center text-[11px] text-slate-400">
+                <p>Best when you have one important outcome you want to see through properly.</p>
+                <a
+                  href="mailto:lee@mcmullen.im?subject=Outcome%20project"
+                  class="inline-flex items-center justify-center gap-1 rounded-full bg-slate-900/90 px-5 py-2 font-semibold text-slate-50 ring-1 ring-slate-700/80 group-hover:bg-brand-500 group-hover:text-slate-950 group-hover:ring-brand-400"
+                >
+                  Outline the outcome
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </footer>
+            </article>
+
+            <!-- Offer 2: Monthly senior engineer -->
+            <article
+              class="group flex flex-col justify-between rounded-2xl border border-brand-500/80 bg-gradient-to-b from-sky-900/70 via-slate-950/80 to-slate-950/95 p-6 shadow-xl shadow-cyan-500/40 ring-1 ring-brand-500/40"
+            >
+              <header class="space-y-4">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="font-display text-lg font-semibold text-slate-50">
+                    Monthly senior engineer
+                  </h3>
+                  <span
+                    class="rounded-full bg-brand-500/10 px-3 py-1 text-[11px] font-semibold text-brand-200 ring-1 ring-brand-400/60"
+                  >
+                    Minimum 1 month · £3k
+                  </span>
+                </div>
+                <p class="text-sm text-slate-50">
+                  A simple monthly arrangement where you get the equivalent of a senior engineer on your
+                  team, for a fraction of the cost of hiring one full‑time.
+                </p>
+              </header>
+
+              <ul class="mt-5 space-y-2 text-xs text-slate-100">
+                <li class="flex gap-2">
+                  <span class="mt-[3px] h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                  <span>Have a senior engineer available to pick up real work in your codebase.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[3px] h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                  <span>Hands‑on implementation, pairing, and unblock‑the‑team problem solving.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[3px] h-1.5 w-1.5 rounded-full bg-brand-300"></span>
+                  <span>Steady improvements to tests, deployment, and day‑to‑day developer experience.</span>
+                </li>
+              </ul>
+
+              <footer class="mt-6 flex flex-col items-center gap-3 text-center text-[11px] text-slate-200">
+                <p>Useful when you want a reliable senior engineer around each month without another hire.</p>
+                <a
+                  href="mailto:lee@mcmullen.im?subject=Monthly%20senior%20engineer"
+                  class="inline-flex items-center justify-center gap-1 rounded-full bg-slate-950/80 px-5 py-2 font-semibold text-brand-100 ring-1 ring-brand-400/70 hover:bg-brand-500 hover:text-slate-950"
+                >
+                  Tell me what you need
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </footer>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Who I work with -->
+      <section id="clients" class="border-b border-slate-800/60 bg-slate-950/60">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
+            <div class="space-y-4">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
+                Who I work best with
+              </p>
+              <h2 class="font-display text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
+                Product‑led teams who care about user experience, quality, and shipping on time.
+              </h2>
+              <p class="text-sm text-slate-300 sm:text-[15px]">
+                I’m most useful when there is a <span class="font-semibold">clear business outcome</span>
+                at stake and a team who want to improve how they build and ship software, not simply move
+                work from one column to another.
+              </p>
+
+              <div class="mt-4 grid gap-3 text-xs text-slate-300 sm:grid-cols-2">
+                <div class="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+                  <p class="font-semibold text-slate-100">Early‑stage & scale‑ups</p>
+                  <p class="mt-1 text-slate-400">
+                    You’ve found traction and now need to move fast without tearing the product in half.
+                  </p>
+                </div>
+                <div class="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+                  <p class="font-semibold text-slate-100">Product & engineering leaders</p>
+                  <p class="mt-1 text-slate-400">
+                    You want a senior partner to spar on trade‑offs, design, and sequencing.
+                  </p>
+                </div>
+                <div class="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+                  <p class="font-semibold text-slate-100">Teams mid‑migration</p>
+                  <p class="mt-1 text-slate-400">
+                    Re‑platforms, rewrites, or architecture shifts that need to land without drama.
+                  </p>
+                </div>
+                <div class="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+                  <p class="font-semibold text-slate-100">Ops‑critical products</p>
+                  <p class="mt-1 text-slate-400">
+                    Reliability, observability, and performance matter as much as features.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <aside
+              class="glass mt-2 rounded-2xl p-6 text-xs text-slate-200 shadow-xl shadow-black/60 ring-1 ring-slate-800/80"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-400">
+                What this looks like in practice
+              </p>
+              <ul class="mt-4 space-y-3">
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    Transforming a risky rewrite into a staged, reversible migration that ships value
+                    every sprint.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    Taking a messy, under‑specified initiative and turning it into a realistic plan your
+                    team can actually deliver.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    Pairing with mid‑level engineers to level them up while unblocking the work.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    Helping you say “no” to work that doesn’t move the needle and “yes” to the right
+                    bets.
+                  </span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech stack -->
+      <section id="tech" class="border-b border-slate-800/60 bg-slate-950/80">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-start">
+            <div class="space-y-4">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
+                Tech stack
+              </p>
+              <h2 class="font-display text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
+                Strong bias towards modern front‑end: React, React Native, and the surrounding tooling.
+              </h2>
+              <p class="text-sm text-slate-300 sm:text-[15px]">
+                Most of my recent work has been in <span class="font-semibold">React and React Native</span> —
+                building and evolving products where the user experience matters as much as the underlying
+                systems. I’m comfortable picking up existing codebases as well as starting from a clean
+                slate where it makes sense.
+              </p>
+
+              <div class="mt-4 grid gap-3 text-xs text-slate-300 sm:grid-cols-2">
+                <div class="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+                  <p class="font-semibold text-slate-100">Front‑end</p>
+                  <p class="mt-1 text-slate-400">
+                    React, TypeScript, Tailwind CSS, modern build tools, and component‑driven UI design.
+                  </p>
+                </div>
+                <div class="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+                  <p class="font-semibold text-slate-100">Mobile</p>
+                  <p class="mt-1 text-slate-400">
+                    React Native applications, shared logic with web front‑ends, and practical navigation,
+                    state management, and release processes.
+                  </p>
+                </div>
+                <div class="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+                  <p class="font-semibold text-slate-100">Back‑end & APIs</p>
+                  <p class="mt-1 text-slate-400">
+                    Working with existing APIs and services, shaping contracts, and keeping front‑end and
+                    back‑end changes aligned.
+                  </p>
+                </div>
+                <div class="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+                  <p class="font-semibold text-slate-100">Tooling & quality</p>
+                  <p class="mt-1 text-slate-400">
+                    Tests, CI, and local developer experience that make it easier for your team to ship
+                    changes confidently.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <aside
+              class="glass mt-2 rounded-2xl p-6 text-xs text-slate-200 shadow-xl shadow-black/60 ring-1 ring-slate-800/80"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-400">
+                What this means in practice
+              </p>
+              <ul class="mt-4 space-y-3">
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    Taking an existing React or React Native product and improving performance, structure,
+                    and developer ergonomics without a full rewrite.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    Helping a team introduce or extend TypeScript, sensible testing, and shared UI
+                    components across web and mobile.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    Working closely with designers and product people to turn ideas into well‑shaped
+                    front‑end work that ships.
+                  </span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="process" class="border-b border-slate-800/60 bg-slate-950/80">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-start">
+            <div class="space-y-4">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
+                How we’ll work together
+              </p>
+              <h2 class="font-display text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
+                Senior support without the overhead of another full‑time hire.
+              </h2>
+              <p class="text-sm text-slate-300 sm:text-[15px]">
+                The aim is to give you clarity quickly, help you deliver something concrete, and leave
+                your team in a better place.
+              </p>
+
+              <ol class="mt-4 space-y-4 text-xs text-slate-200">
+                <li class="flex gap-3">
+                  <div
+                    class="mt-[2px] flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/80 text-[11px] font-semibold text-brand-300 ring-1 ring-slate-700/80"
+                  >
+                    01
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-50">Fit check & discovery</p>
+                    <p class="mt-1 text-slate-400">
+                      We talk about your team, the business process behind the work, constraints, and what
+                      “success” looks like. If I’m not the right fit, I’ll say so and, where possible,
+                      point you towards someone more suitable.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <div
+                    class="mt-[2px] flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/80 text-[11px] font-semibold text-brand-300 ring-1 ring-slate-700/80"
+                  >
+                    02
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-50">Understand the process & define the work</p>
+                    <p class="mt-1 text-slate-400">
+                      We map the key steps in the current process, agree where software should help, and
+                      pick the most appropriate way of working. From that we define the scope, success
+                      measures, and how we’ll collaborate.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <div
+                    class="mt-[2px] flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/80 text-[11px] font-semibold text-brand-300 ring-1 ring-slate-700/80"
+                  >
+                    03
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-50">Execute & adapt</p>
+                    <p class="mt-1 text-slate-400">
+                      We get on with the work. I’m hands‑on where it helps most: pairing, reviewing,
+                      designing, and unblocking. We adjust as we learn.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <div
+                    class="mt-[2px] flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/80 text-[11px] font-semibold text-brand-300 ring-1 ring-slate-700/80"
+                  >
+                    04
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-50">Close‑out & next steps</p>
+                    <p class="mt-1 text-slate-400">
+                      You get distilled, executive‑friendly outcomes, clear next moves, and optional
+                      ongoing partnership if it makes sense.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div
+              class="glass mt-4 rounded-2xl p-6 text-xs text-slate-200 shadow-xl shadow-black/60 ring-1 ring-slate-800/80"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-400">
+                Why productised instead of day rate?
+              </p>
+              <ul class="mt-4 space-y-3">
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    You buy outcomes, not hours. That keeps us aligned on impact instead of time sheets.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    It scales my involvement: I can work deeply with a small number of clients at once
+                    without burning out or diluting value.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    You get predictability on cost and timelines, with a clearly defined beginning and
+                    end.
+                  </span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-[5px] h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                  <span>
+                    We can evolve from one‑off accelerators into ongoing partnership if and when it
+                    makes sense.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About & FAQ -->
+      <section id="about" class="bg-slate-950">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="grid gap-12 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-start">
+            <div class="space-y-4">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
+                About
+              </p>
+              <h2 class="font-display text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
+                I’ve been shipping software for 20+ years — as a hands‑on engineer, a lead, and a partner to key stakeholders.
+              </h2>
+              <p class="text-sm text-slate-300 sm:text-[15px]">
+                I’ve worked across greenfield builds, difficult legacy systems, and most things in
+                between. What I care about most is <span class="font-semibold">helping teams ship good
+                work consistently</span>, on foundations that won’t get in their way later.
+              </p>
+              <p class="text-sm text-slate-300 sm:text-[15px]">
+                These days I think of the work as closer to composition than heroics: taking ideas,
+                constraints and a codebase, then arranging them so the right pieces work together at the
+                right time. AI is part of that toolkit, but the point is still the finished piece, not
+                the tools.
+              </p>
+              <p class="text-sm text-slate-300 sm:text-[15px]">
+                I’m based in the UK and usually work remotely with teams in different time zones.
+                Clients tend to value that I am calm under pressure, straightforward, and happy to work
+                directly in the codebase.
+              </p>
+
+              <div class="mt-4 flex flex-wrap items-center gap-4 text-xs text-slate-300">
+                <a
+                  href="mailto:lee@mcmullen.im"
+                  class="inline-flex items-center gap-1 rounded-full bg-slate-900 px-4 py-2 font-semibold text-slate-50 ring-1 ring-slate-700 hover:bg-slate-800"
+                >
+                  Email me
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
+                FAQ
+              </p>
+              <div class="space-y-4 text-xs text-slate-200">
+                <details class="group rounded-xl border border-slate-800/80 bg-slate-950/60 p-4">
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-slate-100"
+                  >
+                    <span>Do you still take straightforward day‑rate contracts?</span>
+                    <span class="text-slate-500 group-open:hidden">+</span>
+                    <span class="hidden text-slate-500 group-open:inline">−</span>
+                  </summary>
+                  <p class="mt-3 text-slate-400">
+                    Occasionally, for the right situation. In practice I’ve found that productised
+                    engagements work better for both sides — clearer expectations, more focus, and less
+                    administration. If you can only work on a day‑rate basis, we can still talk about
+                    what is possible.
+                  </p>
+                </details>
+
+                <details class="group rounded-xl border border-slate-800/80 bg-slate-950/60 p-4">
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-slate-100"
+                  >
+                  <span>What are your typical fees?</span>
+                    <span class="text-slate-500 group-open:hidden">+</span>
+                    <span class="hidden text-slate-500 group-open:inline">−</span>
+                  </summary>
+                  <p class="mt-3 text-slate-400">
+                    Pricing depends on scope and urgency, but most ongoing work sits at around £3,000 per
+                    month for something close to a full‑time engineer’s attention, without the overhead
+                    of hiring. I’ll always give you a clear, fixed‑price proposal before we begin.
+                  </p>
+                </details>
+
+                <details class="group rounded-xl border border-slate-800/80 bg-slate-950/60 p-4">
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-slate-100"
+                  >
+                    <span>How soon can you start?</span>
+                    <span class="text-slate-500 group-open:hidden">+</span>
+                    <span class="hidden text-slate-500 group-open:inline">−</span>
+                  </summary>
+                  <p class="mt-3 text-slate-400">
+                    I usually book engagements a few weeks in advance. If your need is urgent, it’s still
+                    worth getting in touch — if I can’t help directly, I may be able to recommend
+                    someone who can.
+                  </p>
+                </details>
+
+                <details class="group rounded-xl border border-slate-800/80 bg-slate-950/60 p-4">
+                  <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-slate-100"
+                  >
+                  <span>What if we just want advice, not hands‑on work?</span>
+                    <span class="text-slate-500 group-open:hidden">+</span>
+                    <span class="hidden text-slate-500 group-open:inline">−</span>
+                  </summary>
+                  <p class="mt-3 text-slate-400">
+                    That’s exactly what Outcome projects and longer‑running multi‑client delivery are for.
+                    We can bias towards advisory and reviews, but there will still be a strong focus on
+                    real changes in the code and in the way the team works.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-slate-800/80 bg-slate-950/95">
+        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-6 text-[11px] text-slate-500 sm:flex-row sm:px-6 lg:px-8">
+          <p>&copy; <span id="year"></span> Lee McMullen. All rights reserved.</p>
+          <div class="flex flex-wrap items-center gap-4">
+            <a
+              href="mailto:lee@mcmullen.im"
+              class="text-slate-400 hover:text-brand-200"
+              >lee@mcmullen.im</a
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
