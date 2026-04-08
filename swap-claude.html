@@ -347,7 +347,8 @@
         (function () {
             var host = window.location.hostname;
             var isLocal = window.location.protocol === 'file:' || /^localhost$|^127\.0\.0\.1$/i.test(host) || host === '';
-            var url = isLocal ? 'http://localhost:3001/swap/embed/v1' : 'https://beta.taostats.io/swap/embed/v1';
+            // var url = isLocal ? 'http://localhost:3001/swap/embed/v1' : 'https://beta.taostats.io/swap/embed/v1';
+            var url = 'https://taostats.io/swap/embed/v1';
             document.getElementById('swap-iframe').src = url;
         })();
 
